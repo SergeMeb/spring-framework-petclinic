@@ -1,16 +1,17 @@
 pipeline {
     agent any
 
-    tools {
-        maven "maven 3.6.3"
-    }
-
     stages {
-        stage('Build') {
+        stage('Example') {
            steps{
               // Run the maven build
-              sh "mvn clean package"
+              echo ' Hello world '
            }
         }
+    }
+    post{
+         always {
+             echo ' toujours hello '
+         }
     }
 }
