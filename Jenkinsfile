@@ -27,8 +27,8 @@ pipeline {
                         steps {
                             withSonarQubeEnv('SonarQube') {
                             sh "mvn -e clean package sonar:sonar -Dsonar.host_url=$SONAR_HOST_URL "
-
                             }
+
                          }
                     }
             }
